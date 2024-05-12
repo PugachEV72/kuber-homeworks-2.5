@@ -71,4 +71,9 @@
 
 ---
 
+## `Доработка:`
+
+![Скриншот 10](https://github.com/PugachEV72/Images/blob/master/2024-05-12_23-20-01.png)
+
+---
 
