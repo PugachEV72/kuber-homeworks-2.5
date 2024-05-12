@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-multitool-{{ include "mychart.fullname" . }}
+spec:
+  ports:
+    - port: {{ .Values.deployment1.service.port }}
+      targetPort: {{ .Values.deployment1.httpPort }}
+      name: http
+  selector:
+    app: multitool-{{ include "mychart.fullname" . }}
