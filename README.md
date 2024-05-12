@@ -1,60 +1,74 @@
-# Домашнее задание к занятию `` - Пугач Евгений.
+# Домашнее задание к занятию `«Helm»` - Пугач Евгений.
 
 
 ---
 
-## `Задание 1`
+## `Установка Helm`
+
+![Скриншот 1](https://github.com/PugachEV72/Images/blob/master/2024-05-12_16-44-45.png)
+
+---
+
+## `Задание 1. Подготовить Helm-чарт для приложения`
+
+1. Необходимо упаковать приложение в чарт для деплоя в разные окружения.
+2. Каждый компонент приложения деплоится отдельным deployment’ом или statefulset’ом.
+3. В переменных чарта измените образ приложения для изменения версии.
 
 ### Ответ:
 
-### Решение: 
+Подготовлен чарт:
 
-1.  ....
-2. 
-3. 
-4. 
-5. 
-6. 
+![Скриншот 2](https://github.com/PugachEV72/Images/blob/master/2024-05-12_17-30-08.png)
 
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
+В файле Chart.yaml изменена версия app:
 
-![Скриншот 1]()
+![Скриншот 3](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-17-04.png)
 
+[Ссылка на Chart.yaml](https://github.com/PugachEV72/kuber-homeworks-2.5/blob/main/helm/mychart/Chart.yaml)
+
+В файле values.yaml изменена версия nginx и прописаны параметры деплоя multitool:
+
+![Скриншот 4](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-22-41.png)
+
+![Скриншот 5](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-23-56.png)
+
+[Ссылка на values.yaml](https://github.com/PugachEV72/kuber-homeworks-2.5/blob/main/helm/mychart/values.yaml)
+
+В templates/ добавлены deployment и service для multitool:
+
+[Ссылка на deployment-multitool.yaml](https://github.com/PugachEV72/kuber-homeworks-2.5/blob/main/helm/mychart/templates/deployment-multitool.yaml)
+
+[Ссылка на service-multitool.yaml](https://github.com/PugachEV72/kuber-homeworks-2.5/blob/main/helm/mychart/templates/service-multitool.yaml)
 
 ---
 
-## `Задание 2`
+## `Задание 2. Запустить две версии в разных неймспейсах`
+
+1. Подготовив чарт, необходимо его проверить. Запуститe несколько копий приложения.
+2. Одну версию в namespace=app1, вторую версию в том же неймспейсе, третью версию в namespace=app2.
+3. Продемонстрируйте результат.
 
 ### Ответ:
 
-### Решение:
+Нэймспэйс app1: 
 
-![Скриншот 2]()
+![Скриншот 6](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-05-46.png)
 
+![Скриншот 7](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-07-58.png)
 
----
+Нэймспэйс app2:
 
-## `Задание 3`
+![Скриншот 8](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-09-38.png)
 
-![Скриншот 3]()
-
-## `Задание 4`
-
-![Скриншот 4]()
+![Скриншот 9](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-10-49.png)
 
 ---
-### Дополнительные задания (со звездочкой*)
 
+## `Итог:`
 
-## `Задание 5`
+![Скриншот 10](https://github.com/PugachEV72/Images/blob/master/2024-05-12_19-15-59.png)
 
-![Скриншот 5]()
-
+---
 
 
